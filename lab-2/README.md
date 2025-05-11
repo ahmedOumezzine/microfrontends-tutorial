@@ -1,0 +1,1 @@
+# Mini-projet pour Lab 2 (Actualités, Vue.js)

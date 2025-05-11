@@ -1,5 +1,6 @@
 
 <img src="./images/intro.jpg" alt="Capture d’écran" style="max-width: 100%; height: auto;" />
+
 # Tutoriel sur les Micro-Frontends
 
 Bienvenue dans le **Tutoriel sur les Micro-Frontends**, un guide pratique pour apprendre à construire des applications front-end modulaires en utilisant **React**, **Vue.js**, **Angular**, **Webpack Module Federation**, et **Bootstrap**. Ce tutoriel est conçu pour les développeurs souhaitant comprendre comment diviser une application front-end en modules indépendants, développés et déployés séparément, tout en maintenant une expérience utilisateur cohérente.

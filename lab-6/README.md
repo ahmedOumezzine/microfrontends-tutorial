@@ -1,0 +1,1 @@
+# Mini-projet pour Lab 6 (Réseau social, Angular)
