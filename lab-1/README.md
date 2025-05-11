@@ -2,11 +2,7 @@
 
 ## Lab 1 : Introduction aux Micro-Frontends
 Aperçu
-Bienvenue dans **le premier Lab du tutoriel** sur les micro-frontends ! Ce Lab introduit le concept des micro-frontends, une approche architecturale qui divise une application front-end en modules plus petits et indépendants, pouvant être développés, déployés et mis à l'échelle séparément. Dans ce Lab, nous construisons une application simple avec trois micro-frontends :
-
-- **host-app** : L'application principale qui intègre les composants distants.
-- **articles-list-app** : Un module distant affichant une liste d'articles.
-- **articles-details-app** : Un module distant affichant le contenu détaillé d'un article sélectionné.
+Bienvenue dans **le premier Lab du tutoriel** sur les micro-frontends ! Ce Lab introduit le concept des micro-frontends, une approche architecturale qui divise une application front-end en modules plus petits et indépendants, pouvant être développés, déployés et mis à l'échelle séparément. 
 
 L'application inclut un article intitulé " **Introduction aux Micro-Frontends** ", qui explique les bases de cette architecture. Ce Lab pose les fondations pour comprendre les micro-frontends en utilisant React, Webpack Module Federation, et Bootstrap.
 
@@ -22,6 +18,11 @@ En complétant ce Lab, vous allez :
 
 <img src="./images/structure-page.jpg" alt="Capture d’écran" style="max-width: 100%; height: auto;" />
 
+Dans ce Lab, nous construisons une application simple avec trois micro-frontends :
+
+- **host-app** : L'application principale qui intègre les composants distants.
+- **articles-list-app** : Un module distant affichant une liste d'articles.
+- **articles-details-app** : Un module distant affichant le contenu détaillé d'un article sélectionné.
 
 ### Structure du projet
 Le mini-projet de ce Lab est organisé comme suit :
@@ -77,8 +78,11 @@ cd microfrontends-tutorial/lab-1
 
 #### Installez les dépendances :
 yarn install
+yarn install:all
 
-Cela installe toutes les dépendances pour host-app, articles-list-app, et article-details-app.
+
+yarn install installe concurrently dans lab-1.
+yarn install:all installe les dépendances dans host-app, articles-list-app, et article-details-app.
 
 #### Démarrez les serveurs de développement :
 yarn start:all
@@ -134,10 +138,9 @@ Configure Webpack Module Federation pour activer les micro-frontends.
 Les dépendances partagées (react, react-dom) sont configurées comme singletons pour éviter les duplications.
 
 ### Concepts clés démontrés
-
-**Micro-Frontends** : Diviser une application front-end en modules indépendants pour une meilleure évolutivité et une autonomie des équipes.
-**Webpack Module Federation** : Une fonctionnalité de Webpack permettant le chargement dynamique de modules distants et le partage de dépendances.
-**Chargement paresseux avec React :** Utilisation de React.lazy et Suspense pour charger les composants distants uniquement lorsque nécessaire.
-**Intégration de Bootstrap :** Application d'un style cohérent à travers les micro-frontends avec Bootstrap 5.3.0.
-**Chargement asynchrone :** Utilisation de bootstrap.js pour gérer l'initialisation asynchrone des modules.
+- **Micro-Frontends** : Diviser une application front-end en modules indépendants pour une meilleure évolutivité et une autonomie des équipes.
+- **Webpack Module Federation** : Une fonctionnalité de Webpack permettant le chargement dynamique de modules distants et le partage de dépendances.
+- **Chargement paresseux avec React :** Utilisation de React.lazy et Suspense pour charger les composants distants uniquement lorsque nécessaire.
+- **Intégration de Bootstrap :** Application d'un style cohérent à travers les micro-frontends avec Bootstrap 5.3.0.
+- **Chargement asynchrone :** Utilisation de bootstrap.js pour gérer l'initialisation asynchrone des modules.
 
