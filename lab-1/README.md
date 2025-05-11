@@ -4,9 +4,9 @@
 Aperçu
 Bienvenue dans **le premier Lab du tutoriel** sur les micro-frontends ! Ce Lab introduit le concept des micro-frontends, une approche architecturale qui divise une application front-end en modules plus petits et indépendants, pouvant être développés, déployés et mis à l'échelle séparément. Dans ce Lab, nous construisons une application simple avec trois micro-frontends :
 
-**host-app** : L'application principale qui intègre les composants distants.
-**articles-list-app** : Un module distant affichant une liste d'articles.
-**articles-details-app** : Un module distant affichant le contenu détaillé d'un article sélectionné.
+- **host-app** : L'application principale qui intègre les composants distants.
+- **articles-list-app** : Un module distant affichant une liste d'articles.
+- **articles-details-app** : Un module distant affichant le contenu détaillé d'un article sélectionné.
 
 L'application inclut un article intitulé " **Introduction aux Micro-Frontends** ", qui explique les bases de cette architecture. Ce Lab pose les fondations pour comprendre les micro-frontends en utilisant React, Webpack Module Federation, et Bootstrap.
 
@@ -17,6 +17,11 @@ En complétant ce Lab, vous allez :
 - Apprendre à configurer Webpack Module Federation pour permettre le chargement dynamique de modules.
 - Utiliser React avec React.lazy et Suspense pour intégrer des composants distants de manière fluide.
 - Mettre en place un projet de micro-frontends simple avec plusieurs applications indépendantes.
+
+### Structure du la page
+
+<img src="./images/structure-page.jpg" alt="Capture d’écran" style="max-width: 100%; height: auto;" />
+
 
 ### Structure du projet
 Le mini-projet de ce Lab est organisé comme suit :
@@ -55,9 +60,7 @@ lab-1/
 ```
 
 **host-app** : S'exécute sur http://localhost:9000 et agit comme l'application principale, chargeant les composants distants depuis articles-list-app et article-details-app.
-
 **articles-list-app** : S'exécute sur http://localhost:9001 et expose le composant ArticlesList.
-
 **article-details-app** : S'exécute sur http://localhost:9002 et expose le composant ArticleDetails.
 
 ### Prérequis
@@ -91,6 +94,12 @@ Cette commande utilise concurrently pour exécuter les trois applications simult
 
 Ouvrez votre navigateur et accédez à http://localhost:9000.
 Vous devriez voir une page avec une liste contenant un article à gauche et ses détails à droite lorsqu'il est sélectionné.
+
+
+### Resultat 
+
+<img src="./images/img_1.png" alt="Capture d’écran" style="max-width: 100%; height: auto;" />
+<img src="./images/img_2.png" alt="Capture d’écran" style="max-width: 100%; height: auto;" />
 
 ### Fichiers clés et concepts
 Voici les fichiers clés de ce Lab et les concepts qu'ils illustrent :
