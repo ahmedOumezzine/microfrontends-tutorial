@@ -1,12 +1,13 @@
 {
   "name": "@ahmedoumezzine/root-app",
+  "description": "Application hôte pour Lab 1",
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "webpack serve --mode=development",
-    "build": "webpack --mode=production"
+    "start": "webpack serve  --mode=development --config webpack.config.js --port 9000",
+    "build": "webpack --mode=production --config webpack.config.js"
   },
-  "dependencies": { 
+  "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },

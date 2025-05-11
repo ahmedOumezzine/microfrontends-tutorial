@@ -1,0 +1,18 @@
+{
+  "name": "lab-1",
+  "version": "1.0.0",
+  "description": "Lab 1 - Blog collaboratif pour apprendre la navigation dans les micro-frontends",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "install:all": "concurrently \"cd packages/host-app && yarn install\" \"cd packages/articles-list-app && yarn install\" \"cd packages/article-details-app && yarn install\"",
+    "start:all": "concurrently \"cd packages/host-app && yarn start\" \"cd packages/articles-list-app && yarn start\" \"cd packages/article-details-app && yarn start\"",
+    "build:all": "concurrently \"cd packages/host-app && yarn build\" \"cd packages/articles-list-app && yarn build\" \"cd packages/article-details-app && yarn build\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  },
+  "license": "MIT"
+}
