@@ -188,7 +188,7 @@ Chaque Lab est un projet autonome.
 ```
 microfrontends-tutorial/
 ├── lab-1/                    # Mini-projet pour Lab 1 (Blog collaboratif, React)
-│   ├── packages/
+│   ├── micro-blog/
 │   │   ├── host-app/         # Application hôte
 │   │   ├── articles-list-app/ # Application distante (liste)
 │   │   ├── article-details-app/ # Application distante (détails)
@@ -207,26 +207,6 @@ microfrontends-tutorial/
 ├── LICENSE                   # Licence MIT
 └── package.json              # Scripts et configuration du dépôt
 ```
-
-## Installation globale
-Pour configurer l’ensemble du dépôt :
-
-1. **Clonez le dépôt** :
-   ```bash
-   git clone https://github.com/ahmedOumezzine/microfrontends-tutorial.git
-   cd microfrontends-tutorial
-   ```
-
-2. **Installez les dépendances** :
-   ```bash
-   yarn install
-   ```
-
-3. **Démarrez un Lab spécifique** :
-   ```bash
-   yarn start:lab-1
-   ```
-   Remplacez `lab-1` par `lab-2`, `lab-3`, etc., pour d’autres Labs.
 
 ## Déploiement
 Chaque Lab peut être déployé sur une plateforme comme **Vercel**. Consultez le `README.md` de chaque Lab pour des instructions détaillées sur le déploiement, y compris la configuration des URLs des remotes pour Webpack Module Federation.

@@ -28,7 +28,7 @@ Dans ce Lab, nous construisons une application simple avec trois micro-frontends
 Le mini-projet de ce Lab est organisé comme suit :
 ```
 lab-1/
-├── packages/
+├── micro-blog/
 │   ├── host-app/                   # Application hôte (port 9000)
 │   │   ├── src/
 │   │   │   ├── pages/

@@ -1,12 +1,11 @@
 import React, { Suspense, useState } from "react";
 
 const ArticlesList = React.lazy(() =>
-  import("ArticleListApp_Remote/ArticlesList")
+  import('articlesListApp/ArticlesList')
 );
 const ArticleDetails = React.lazy(() =>
-  import("ArticleDetailApp_Remote/ArticleDetails")
-); 
-
+  import('articleDetailsApp/ArticleDetails')
+);
 export default function BlogPage() {
   const [selectedArticle, setSelectedArticle] = useState(null);
 
