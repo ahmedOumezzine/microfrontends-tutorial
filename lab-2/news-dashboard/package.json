@@ -1,6 +1,11 @@
 {
   "name": "news-dashboard",
   "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT"
+  "scripts": {
+    "install:all": "yarn --cwd host-app install && yarn --cwd news-list-app install && yarn --cwd news-details-app install",
+    "start:all": "concurrently \"yarn --cwd host-app start\" \"yarn --cwd news-list-app start\" \"yarn --cwd news-details-app start\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
 }

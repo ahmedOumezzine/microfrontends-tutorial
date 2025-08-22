@@ -11,7 +11,7 @@ Chaque Lab est un mini-projet autonome qui explore un aspect clé des micro-fron
 - **Lab 1** ([Voir le code](./lab-1)) : 
 Blog collaboratif (React) pour apprendre la navigation, avec un article intitulé "Navigation dans les Micro-Frontends". [Accéder directement au Lab 1](https://github.com/ahmedOumezzine/microfrontends-tutorial/tree/main/lab-1)
 - **Lab 2** ([Voir le code](./lab-2)) : 
-Tableau de bord d’actualités (Vue.js) pour apprendre la sécurité, avec un article intitulé "Sécurité dans les Micro-Frontends".
+Tableau de bord d’actualités (Vue.js) pour apprendre la sécurité, avec un article intitulé "Sécurité dans les Micro-Frontends".  [Accéder directement au Lab 2](https://github.com/ahmedOumezzine/microfrontends-tutorial/tree/main/lab-2)
 - **Lab 3** ([Voir le code](./lab-3)) : 
 Boutique en ligne (Angular) pour apprendre la gestion d’état, avec un article intitulé "Gestion d’état dans les Micro-Frontends".
 - **Lab 4** ([Voir le code](./lab-4)) :
@@ -47,20 +47,31 @@ Chaque Lab est un **mini-projet autonome** avec un contexte unique, conçu pour 
   - Gestion des transitions fluides entre modules.
 - **Technologies** : React 18.2.0, Webpack 5.95.0, Bootstrap 5.3.3, react-router-dom 6.26.2, Yarn 1.22.22.
 
-#### Lab 2 : Tableau de bord d’actualités (Sécurité avec Vue.js)
-- **Objectif** : Implémenter des mécanismes de **sécurité** (authentification) dans les micro-frontends.
-- **Contexte** : Un tableau de bord où les utilisateurs authentifiés consultent des actualités.
-- **Contenu** :
-  - Trois micro-frontends en **Vue.js 3** : `dashboard-app` (hôte), `news-feed-app` (flux d’actualités), `news-auth-app` (module d’authentification).
-  - Utilisation de **Webpack Module Federation** pour charger les modules.
-  - Intégration de `vue-router` et d’un système de token JWT simulé pour restreindre l’accès.
-  - Formulaire de connexion avec **Bootstrap 5.3**.
-  - Article intitulé "Sécurité dans les Micro-Frontends".
-- **Ce qu’on apprend des micro-frontends** :
-  - Gestion de l’authentification partagée entre modules.
-  - Protection des routes dans une architecture distribuée.
-  - Communication sécurisée des tokens entre micro-frontends.
+#### Lab 2 : Tableau de Bord d’Actualités (Sécurité avec Vue.js)
+
+- **Objectif** : Implémenter des mécanismes de `sécurité (authentification)` dans les micro-frontends.
+- **Contexte** : Un tableau de bord où les utilisateurs authentifiés consultent des actualités. Seuls les utilisateurs connectés peuvent voir la liste des actualités et leurs détails, avec un message "Accès non autorisé" affiché dans le navigateur en cas de non-authentification.
+- **Contenu :**
+* Trois micro-frontends en Vue.js 3 :
+  -`host-app` (hôte) : Gère la navigation et l’authentification via un formulaire de connexion.
+  -`news-list-app` (flux d’actualités) : Affiche une liste d’actualités uniquement si un token valide est présent.
+  -`news-details-app` (détails des actualités) : Affiche les détails d’une actualité sélectionnée si le token est valide.
+
+
+* Utilisation de Webpack Module Federation pour charger dynamiquement les modules.
+* Intégration de vue-router pour protéger la route /dashboard et rediriger vers la page de connexion avec un message d’alerte en cas d’accès non autorisé.
+* Génération d’un token JWT simulé (encodé en base64 avec un payload { user, exp }) dans `host-app`, avec décodage et vérification de l’expiration dans `news-list-app` et `news-details-app`.
+* Formulaire de connexion stylisé avec Bootstrap 5.3. 
+
+
+- **Ce qu’on apprend des micro-frontends :**
+Gestion de l’authentification partagée : Un token JWT simulé est stocké dans localStorage et partagé entre les micro-frontends, avec validation de l’expiration.
+Protection des routes : Utilisation de guards Vue Router pour restreindre l’accès à /dashboard et afficher une alerte claire lors d’une tentative d’accès non autorisé.
+Communication sécurisée des tokens : Les micro-frontends décodent le token et vérifient sa validité avant d’afficher du contenu, masquant les actualités en cas d’échec.
+
+
 - **Technologies** : Vue.js 3.4.0, Webpack 5.95.0, Bootstrap 5.3.3, vue-router 4.4.5, Yarn 1.22.22.
+
 
 #### Lab 3 : Boutique en ligne (Gestion d’état avec Angular)
 - **Objectif** : Apprendre à gérer l’**état partagé** entre micro-frontends.

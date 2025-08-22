@@ -35,22 +35,26 @@ export default {
   data() {
     return {
       username: '',
-      password: ''
+      password: '',
     };
   },
   methods: {
     login() {
       if (this.username === 'user' && this.password === 'pass') {
-        const token = 'yourtoken ici';
+        const payload = {
+          user: this.username,
+          exp: Math.floor(Date.now() / 1000) + 3600, // Expires in 1 hour
+        };
+        const token = btoa(JSON.stringify(payload)); // Simulated JWT (base64 encoded)
         console.log('Generated token:', token);
-        localStorage.setItem('jwt', token);
-        this.router.push('/dashboard').catch(err => {
+        localStorage.setItem('token', token);
+        this.router.push('/dashboard').catch((err) => {
           console.error('Router push error:', err);
         });
       } else {
         alert('Nom d’utilisateur ou mot de passe incorrect');
       }
-    }
-  }
+    },
+  },
 };
 </script>

@@ -1,7 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { ModuleFederationPlugin } = require('webpack').container;
 const { VueLoaderPlugin } = require('vue-loader');
-const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -41,6 +40,5 @@ module.exports = {
         './NewsList': './src/NewsList.vue',
       },
     }),
-    new NodePolyfillPlugin(),
   ],
 };
