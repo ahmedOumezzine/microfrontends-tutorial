@@ -14,7 +14,6 @@ En complétant ce Lab, vous allez :
 - Mettre en place un projet de micro-frontends avec Vue Router pour la navigation.
 
 ### Structure de la page
-<img src="./images/structure-page.jpg" alt="Capture d’écran" style="max-width: 100%; height: auto;" />
 
 Dans ce Lab, nous construisons une application avec trois micro-frontends :
 - **host-app** : L’application principale avec une page de connexion et un tableau de bord, intégrant les composants distants.
@@ -23,6 +22,7 @@ Dans ce Lab, nous construisons une application avec trois micro-frontends :
 
 ### Structure du projet
 Le mini-projet de ce Lab est organisé comme suit :
+```
 lab-2/
 ├── news-dashboard/
 │   ├── host-app/                   # Application hôte (port 9000)
@@ -55,7 +55,9 @@ lab-2/
 │   │   ├── package.json
 │   │   └── webpack.config.js
 ├── README.md                      # Ce fichier
-text- **host-app** : S’exécute sur http://localhost:9000, gère la connexion et intègre les composants distants.
+text
+```
+- **host-app** : S’exécute sur http://localhost:9000, gère la connexion et intègre les composants distants.
 - **news-list-app** : S’exécute sur http://localhost:9001, expose le composant `NewsList`.
 - **news-details-app** : S’exécute sur http://localhost:9002, expose le composant `NewsDetails`.
 
@@ -88,7 +90,15 @@ textCette commande utilise `concurrently` pour exécuter les trois applications 
 - Après connexion, vous serez redirigé vers le tableau de bord affichant la liste des actualités à gauche et les détails à droite lorsqu’une actualité est sélectionnée.
 
 ### Résultat
-<img src="./images/dashboard-screenshot.jpg" alt="Capture d’écran du tableau de bord" style="max-width: 100%; height: auto;" />
+<img src="./images/img_1.png" alt="Capture d’écran" style="max-width: 100%; height: auto;" />
+
+<img src="./images/img_2.png" alt="Capture d’écran" style="max-width: 100%; height: auto;" />
+
+<img src="./images/img_3.png" alt="Capture d’écran" style="max-width: 100%; height: auto;" />
+
+<img src="./images/img_4.png" alt="Capture d’écran" style="max-width: 100%; height: auto;" />
+<img src="./images/img_5.png" alt="Capture d’écran" style="max-width: 100%; height: auto;" />
+
 
 ### Fichiers clés et concepts
 Voici les fichiers clés de ce Lab et les concepts qu’ils illustrent :
