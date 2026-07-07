@@ -1,0 +1,12 @@
+{
+  "name": "analytics-dashboard-debutant",
+  "version": "1.0.0",
+  "scripts": {
+    "install:all": "npm --prefix analytics-app install && npm --prefix chart-list-app install && npm --prefix report-detail-app install",
+    "start:all": "concurrently \"npm --prefix analytics-app start\" \"npm --prefix chart-list-app start\" \"npm --prefix report-detail-app start\"",
+    "build:all": "concurrently \"npm --prefix analytics-app run build\" \"npm --prefix chart-list-app run build\" \"npm --prefix report-detail-app run build\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

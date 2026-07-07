@@ -1,0 +1,29 @@
+name: Lab 10 CI
+
+on:
+  push:
+    paths:
+      - 'lab-10/**'
+      - '.github/workflows/lab-10-ci.yml'
+  pull_request:
+    paths:
+      - 'lab-10/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        project: [analytics-dashboard-debutant, analytics-dashboard-advanced]
+        app: [analytics-app, chart-list-app, report-detail-app]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install dependencies
+        working-directory: lab-10/${{ matrix.project }}/${{ matrix.app }}
+        run: npm install
+      - name: Build
+        working-directory: lab-10/${{ matrix.project }}/${{ matrix.app }}
+        run: npm run build

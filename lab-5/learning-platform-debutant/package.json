@@ -1,0 +1,12 @@
+{
+  "name": "learning-platform-debutant",
+  "version": "1.0.0",
+  "scripts": {
+    "install:all": "npm --prefix learning-app install && npm --prefix course-list-app install && npm --prefix lesson-detail-app install",
+    "start:all": "concurrently \"npm --prefix learning-app start\" \"npm --prefix course-list-app start\" \"npm --prefix lesson-detail-app start\"",
+    "build:all": "concurrently \"npm --prefix learning-app run build\" \"npm --prefix course-list-app run build\" \"npm --prefix lesson-detail-app run build\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

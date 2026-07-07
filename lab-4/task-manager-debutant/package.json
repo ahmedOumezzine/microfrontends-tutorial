@@ -1,0 +1,12 @@
+{
+  "name": "task-manager-debutant",
+  "version": "1.0.0",
+  "scripts": {
+    "install:all": "npm --prefix task-manager-app install && npm --prefix task-list-app install && npm --prefix task-detail-app install",
+    "start:all": "concurrently \"npm --prefix task-manager-app start\" \"npm --prefix task-list-app start\" \"npm --prefix task-detail-app start\"",
+    "build:all": "concurrently \"npm --prefix task-manager-app run build\" \"npm --prefix task-list-app run build\" \"npm --prefix task-detail-app run build\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

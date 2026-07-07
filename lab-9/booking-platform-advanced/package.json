@@ -1,0 +1,12 @@
+{
+  "name": "booking-platform-advanced",
+  "version": "1.0.0",
+  "scripts": {
+    "install:all": "npm --prefix booking-app install && npm --prefix offer-list-app install && npm --prefix offer-detail-app install",
+    "start:all": "concurrently \"npm --prefix booking-app start\" \"npm --prefix offer-list-app start\" \"npm --prefix offer-detail-app start\"",
+    "build:all": "concurrently \"npm --prefix booking-app run build\" \"npm --prefix offer-list-app run build\" \"npm --prefix offer-detail-app run build\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

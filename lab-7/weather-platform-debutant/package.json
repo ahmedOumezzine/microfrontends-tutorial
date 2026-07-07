@@ -1,0 +1,12 @@
+{
+  "name": "weather-platform-debutant",
+  "version": "1.0.0",
+  "scripts": {
+    "install:all": "npm --prefix weather-app install && npm --prefix forecast-list-app install && npm --prefix weather-detail-app install",
+    "start:all": "concurrently \"npm --prefix weather-app start\" \"npm --prefix forecast-list-app start\" \"npm --prefix weather-detail-app start\"",
+    "build:all": "concurrently \"npm --prefix weather-app run build\" \"npm --prefix forecast-list-app run build\" \"npm --prefix weather-detail-app run build\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

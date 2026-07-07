@@ -1,0 +1,12 @@
+{
+  "name": "online-shop-debutant",
+  "version": "1.0.0",
+  "scripts": {
+    "install:all": "npm --prefix shop-app install && npm --prefix product-list-app install && npm --prefix cart-app install",
+    "start:all": "concurrently \"npm --prefix shop-app start\" \"npm --prefix product-list-app start\" \"npm --prefix cart-app start\"",
+    "build:all": "concurrently \"npm --prefix shop-app run build\" \"npm --prefix product-list-app run build\" \"npm --prefix cart-app run build\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

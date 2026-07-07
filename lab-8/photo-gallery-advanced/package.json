@@ -1,0 +1,12 @@
+{
+  "name": "photo-gallery-advanced",
+  "version": "1.0.0",
+  "scripts": {
+    "install:all": "npm --prefix gallery-app install && npm --prefix photo-list-app install && npm --prefix photo-viewer-app install",
+    "start:all": "concurrently \"npm --prefix gallery-app start\" \"npm --prefix photo-list-app start\" \"npm --prefix photo-viewer-app start\"",
+    "build:all": "concurrently \"npm --prefix gallery-app run build\" \"npm --prefix photo-list-app run build\" \"npm --prefix photo-viewer-app run build\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

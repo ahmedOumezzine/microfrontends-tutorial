@@ -1,0 +1,13 @@
+{
+  "name": "social-network-advanced",
+  "version": "1.0.0",
+  "scripts": {
+    "install:all": "npm --prefix social-app install && npm --prefix post-list-app install && npm --prefix profile-app install",
+    "start:all": "concurrently \"npm --prefix social-app start\" \"npm --prefix post-list-app start\" \"npm --prefix profile-app start\"",
+    "build:all": "concurrently \"npm --prefix social-app run build\" \"npm --prefix post-list-app run build\" \"npm --prefix profile-app run build\"",
+    "test:all": "concurrently \"npm --prefix social-app test\" \"npm --prefix post-list-app test\" \"npm --prefix profile-app test\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

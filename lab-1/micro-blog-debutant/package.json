@@ -1,0 +1,21 @@
+{
+  "name": "lab-1-micro-blog-debutant",
+  "version": "1.0.0",
+  "description": "Version debutant du Lab 1 - Micro Blog",
+  "private": true,
+  "scripts": {
+    "install:all": "concurrently \"npm --prefix host-app install\" \"npm --prefix articles-list-app install\" \"npm --prefix article-details-app install\"",
+    "start:all": "concurrently \"npm --prefix host-app start\" \"npm --prefix articles-list-app start\" \"npm --prefix article-details-app start\"",
+    "build:all": "concurrently \"npm --prefix host-app run build\" \"npm --prefix articles-list-app run build\" \"npm --prefix article-details-app run build\"",
+    "start:host": "npm --prefix host-app start",
+    "start:articles": "npm --prefix articles-list-app start",
+    "start:details": "npm --prefix article-details-app start",
+    "build:host": "npm --prefix host-app run build",
+    "build:articles": "npm --prefix articles-list-app run build",
+    "build:details": "npm --prefix article-details-app run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  },
+  "license": "MIT"
+}
